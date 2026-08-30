@@ -8,13 +8,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Wattz turns factory electricity data into rupee savings: live machine tracking, AI briefings, alerts and auditor-ready BRSR carbon reports.",
+          "Wattz turns factory electricity data into savings: live machine tracking, AI briefings, alerts and auditor-ready carbon reports.",
       },
       { property: "og:title", content: "Wattz — Machine-level energy savings for factories" },
       {
         property: "og:description",
         content:
-          "Track every machine, catch losses before the bill, and export auditor-ready carbon reports. Built for Indian MSME factories.",
+          "Track every machine, catch losses before the bill, and export auditor-ready carbon reports.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -32,7 +32,7 @@ const features = [
   {
     label: "Machines",
     title: "Every motor, priced by the hour",
-    body: "Per-machine kW, cost per hour and energy gap — waste has an address.",
+    body: "Per-machine power, cost per hour and energy gap — waste has an address.",
   },
   {
     label: "Assistant",
@@ -64,27 +64,27 @@ function Home() {
 
       {/* Hero */}
       <section className="mx-auto max-w-6xl px-6 pt-8 pb-14 sm:pt-14">
-        <p className="eyebrow">For Indian MSME factories</p>
+        <p className="eyebrow">For modern factories</p>
         <h1 className="mt-4 max-w-3xl font-display text-5xl leading-[1.05] sm:text-6xl">
-          Machine-level rupee savings,
+          Machine-level energy savings,
           <span className="italic text-accent"> from day one.</span>
         </h1>
         <p className="mt-5 max-w-xl text-lg leading-relaxed text-muted-foreground">
-          Wattz reads your factory's electricity per machine, per hour, in rupees — then tells you what to switch off.
+          Wattz reads your factory's electricity per machine, per hour, in local currency — then tells you what to switch off.
         </p>
         <div className="mt-7">
           <a
             href="#pilot"
             className="inline-flex items-center rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
           >
-            Start your 14-day pilot
+            Start your pilot
           </a>
         </div>
 
         <figure className="mt-12 overflow-hidden rounded-2xl border border-border shadow-[var(--shadow-lift)]">
           <img
             src={factoryHero}
-            alt="Machinist working at a lathe on a small Indian factory floor"
+            alt="Machinist working at a lathe on a factory floor"
             width={1600}
             height={1200}
             className="h-[280px] w-full object-cover sm:h-[420px]"
@@ -93,10 +93,10 @@ function Home() {
 
         <dl className="mt-10 grid grid-cols-2 gap-y-6 sm:grid-cols-4">
           {[
-            ["4", "machines tracked"],
-            ["122 kW", "peak draw at a glance"],
-            ["24 hrs", "loss prediction window"],
-            ["Scope 1+2", "BRSR-aligned reporting"],
+            ["Per machine", "tracking"],
+            ["Live", "cost forecast"],
+            ["Same-day", "loss alerts"],
+            ["Auditor-ready", "carbon reports"],
           ].map(([value, label]) => (
             <div key={label}>
               <dt className="font-display text-3xl">{value}</dt>
@@ -130,15 +130,11 @@ function Home() {
           <div className="surface-card p-8">
             <p className="eyebrow">Savings bank</p>
             <h2 className="mt-3 text-2xl leading-tight">
-              Every avoided rupee, kept on the record.
+              Every avoided cost, kept on the record.
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
               Solar self-consumption, export credits, prevented losses and optimization gains roll into one projected annual figure.
             </p>
-            <div className="mt-5 flex items-center justify-between border-t border-border pt-4 text-sm">
-              <span>Projected annual saving</span>
-              <span className="font-display text-2xl text-accent">₹1,674</span>
-            </div>
           </div>
           <div className="surface-card p-8">
             <p className="eyebrow">Compliance</p>
@@ -146,27 +142,15 @@ function Home() {
               Reports your buyer's auditor will accept.
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              Grid EF 0.716 kgCO₂e/kWh (CEA India). Aligned with BRSR Core P6 Q7 and Q8 — the disclosures MSMEs in top-250 value chains are asked for.
+              Aligned with leading emissions factors and sustainability disclosure frameworks — the reporting buyers and auditors expect.
             </p>
-            <div className="mt-5 grid grid-cols-3 gap-4 border-t border-border pt-4">
-              {[
-                ["Renewable", "100%"],
-                ["Intensity", "10.37"],
-                ["Avoided", "4.35 t"],
-              ].map(([label, value]) => (
-                <div key={label}>
-                  <p className="text-xs text-muted-foreground">{label}</p>
-                  <p className="mt-1 font-display text-xl">{value}</p>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
 
       {/* Pilot */}
       <section id="pilot" className="mx-auto max-w-3xl px-6 py-16 text-center">
-        <p className="eyebrow">14-day pilot</p>
+        <p className="eyebrow">Pilot</p>
         <h2 className="mt-3 text-3xl leading-tight sm:text-4xl">
           Start with one plant. Keep the savings.
         </h2>
@@ -184,7 +168,7 @@ function Home() {
             id="email"
             type="email"
             required
-            placeholder="you@factory.in"
+            placeholder="you@factory.com"
             className="h-12 flex-1 rounded-full border border-input bg-card px-5 text-sm outline-none placeholder:text-muted-foreground focus:ring-2 focus:ring-ring"
           />
           <button
@@ -199,7 +183,7 @@ function Home() {
       <footer className="rule-line">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-8 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <span className="font-display text-lg text-foreground">Wattz</span>
-          <span>Energy intelligence for Indian factories</span>
+          <span>Energy intelligence for modern factories</span>
         </div>
       </footer>
     </main>
